@@ -1,0 +1,10 @@
+name: pr comment
+
+on:
+  workflow_dispatch:
+
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "pr comment"
