@@ -7,4 +7,11 @@ jobs:
   comment:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "pr comment"
+      - run: |
+          cat << EOF > comment.md
+          hello from github actions
+          EOF
+      - run: |
+          gh pr comment ${{ github.event.number }} --body-file comment.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
