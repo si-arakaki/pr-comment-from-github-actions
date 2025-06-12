@@ -6,6 +6,9 @@ on:
     types:
       - ready_for_review
 
+permissions:
+  pull-requests: write
+
 jobs:
   comment:
     runs-on: ubuntu-latest
