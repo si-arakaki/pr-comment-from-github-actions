@@ -22,6 +22,6 @@ jobs:
               repo: context.repo.repo,
               body: ([
                 "### 環境変数ファイルの変更があります",
-                "- [ ] [.env.development](../blob/${{ github.ref_name }}/.env.development)",
+                "- [ ] [.env.development](../blob/${{ github.head_ref }}/.env.development)",
               ]).join("\n"),
             });
