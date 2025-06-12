@@ -21,6 +21,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               body: ([
-                "hello from github actions",
+                "### hello from github actions",
+                "- [ ] some task",
               ]).join("\n"),
             });
